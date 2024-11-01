@@ -15,8 +15,18 @@ namespace cs_froms
         public Form1()
         {
             InitializeComponent();
-           TestButton testButton = new TestButton();
-            Controls.Add(testButton);
+            int j = 0;
+            for(int i=0; i <10; i++)
+            {
+                TestButton testButton = new TestButton(i,(i % 3) * 100, (i/3) * 100,100,100);
+                Controls.Add(testButton);
+              
+            }
+          
+
+
+
+
 
         }
     }

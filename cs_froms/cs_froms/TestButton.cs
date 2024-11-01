@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,13 +10,22 @@ namespace cs_froms
 
     internal class TestButton : Button
     {
-        public TestButton()
+        public TestButton(int id,int x,int y,int width,int height)
         {
             Click += Onclick;
+            //ボタン内に文字を表示させる
+            Text =id.ToString();
+
+
+            //ボタンの生成場所を指定
+             Location= new Point(x,y);
+
+            //ボタンの大きさを指定
+            Size = new Size(width,height);
         }
         public void Onclick(object sender, EventArgs s)
         {
-            MessageBox.Show("Blue");
+            MessageBox.Show(Text);
         }
 
 
