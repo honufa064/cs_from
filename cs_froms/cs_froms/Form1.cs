@@ -12,22 +12,36 @@ namespace cs_froms
 {
     public partial class Form1 : Form
     {
+        TestLabel _testLabel;
         public Form1()
         {
             InitializeComponent();
             int j = 0;
             for(int i=0; i <10; i++)
             {
-                TestButton testButton = new TestButton(i,(i % 3) * 100, (i/3) * 100,100,100);
+                TestButton testButton = new TestButton(this,i,(i % 5) * 100, (i/5) * 100,100,100);
                 Controls.Add(testButton);
-              
+           
             }
-          
+            _testLabel=  new TestLabel("ラベルです。", 10, 300, 100, 500);
+            Controls.Add(_testLabel);
 
-
-
-
+            
+            //label.Text = new Point(30, 400);
+            //label.Text="ラベルです。";
+            //controls.Add(label);
 
         }
+        /// <summary>
+        /// ラベルの文字を更新する
+        /// </summary>
+        /// <param name="str"></param>
+        public void LabelTextUpdate(String str)
+        {
+            _testLabel.TextUpdate( str);
+        }
+
+
+
     }
 }
