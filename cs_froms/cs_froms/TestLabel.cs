@@ -30,7 +30,7 @@ namespace cs_froms
         /// 
         /// </summary>
         /// <param name="str"></param>
-      public void TextUpdate(String str)
+        public void TextUpdate(String str)
         { Text = str; }
 
     }
