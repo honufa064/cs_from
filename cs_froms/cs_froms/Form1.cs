@@ -23,7 +23,7 @@ namespace cs_froms
                 Controls.Add(testButton);
            
             }
-            _testLabel=  new TestLabel("ラベルです。", 10, 300, 100, 500);
+            _testLabel=  new TestLabel("ラベルです。",100, 300, 100, 500);
             Controls.Add(_testLabel);
 
             
